@@ -1,9 +1,4 @@
-import os
-from dotenv import load_dotenv
-from langchain.llms import Ollama  
+from crewai import LLM
 
-# Configure the LLM - using Ollama
-llm = Ollama(
-    model="llama3",  
-    temperature=0.7
-)
+
+llm = LLM(model="ollama/erwan2/DeepSeek-R1-Distill-Qwen-1.5B", base_url="http://localhost:11434")
